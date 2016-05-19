@@ -1,0 +1,63 @@
+super + Q
+      pkill swm
+
+super + e
+      emacs
+
+super + o
+      firefox
+
+super + space
+      dmenu_run
+super + C
+      killw $(pfw)
+
+super + Escape
+      kill -USR1 -x sxhkd
+
+super + Down
+      wmv 0 10 $(pfw)
+super + Up
+      wmv 0 -10 $(pfw)
+super + Right
+      wmv 10 0 $(pfw)
+super + Left
+      wmv -10 0 $(pfw)
+
+super + shift + l
+      wrs 10 0 $(pfw)
+super + shift + h
+      wrs -10 0 $(pfw)
+super + shift + j
+      wrs 0 -10 $(pfw)
+super + shift + k
+      wrs 0 10 $(pfw)
+
+# select windows using directions
+super + j
+      focus.sh next
+
+super + f
+      fullscreen.sh $(pfw)
+
+# move windows to corners
+super + {q, w, a, s, z}
+      snap.sh {tl, tr, bl, br, md} $(pfw)
+
+# add window to a group
+super + shift + {1,2,3,4,5}
+      groups.sh -s $(pfw) {1,2,3,4,5}
+
+# toggle groups' visibility
+super + {1,2,3,4,5}
+      groups.sh -t {1,2,3,4,5}
+
+# remove window from all groups
+super + Backspace
+      groups.sh -d all
+
+super + X
+      killwa $(pfw)
+
+super + t
+      tile.sh
