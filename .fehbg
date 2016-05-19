@@ -1,0 +1,2 @@
+#!/bin/sh
+feh  --bg-scale '~/.sxhkd.d/background.png' 
